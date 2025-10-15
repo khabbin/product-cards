@@ -67,30 +67,29 @@
 .product-heading {
   margin-top: 220px;
   margin-bottom: 110px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: 70px;
   line-height: 78px;
   font-weight: 400;
 }
 
 .products-box {
-  margin: 110px 85px 116px 85px;
-  list-style-type: none;
-  height: 1191px;
   width: 1110px;
+  list-style-type: none;
   display: flex;
   gap: 45px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.list {  
-  height: 1715px;
-  width: 1280px;
-  display: inline-block;
-  background-image: url("/images/bg-dandelion.png");
-  background-size: 790px 697px;
+.main-container {
+  margin: auto;
+  background-image: url(images/bg-dandelion.png);
+  background-position: left top;
   background-repeat: no-repeat;
-  background-position: 85px 0px;
+  background-size: 790px;
+  width: 1110px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

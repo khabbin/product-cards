@@ -84,7 +84,7 @@
 
 .main-container {
   margin: auto;
-  background-image: url(images/bg-dandelion.png);
+  background-image: url('images/bg-dandelion.png');
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 790px;

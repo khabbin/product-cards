@@ -94,9 +94,9 @@
   flex-direction: column;
 }
 
-.blue-color {
-  background-color: blue;
+.red-color-bg {
+  background-color: red;
 }
-.green-color {
+.green-color-bg {
   background-color: green;
 }

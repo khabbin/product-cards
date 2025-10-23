@@ -1,4 +1,3 @@
-const googleUrl = 'https://google.com'
 //задание 2
 const productCard = document.querySelector('.card-container');
 const productCards = document.querySelectorAll('.card-container');
@@ -12,6 +11,7 @@ changeAllCardsColorBtn.addEventListener('click', () => {
   productCards.forEach((card) => card.style.backgroundColor = 'blue');
 })
 //задание 4
+const googleUrl = 'https://google.com'
 const openGooglePageBtn = document.querySelector('#open-google-btn');
 openGooglePageBtn.addEventListener('click', () => {
   window.open(googleUrl);
@@ -36,14 +36,13 @@ function openConsoleLog(message) {
   console.log(message)
 }
 //задание 7
-const task7Btn1 = document.querySelector('#task-7');
-const task7Btn = document.querySelector('#task-7');
-task7Btn.addEventListener('click', () => {
-  task7Btn1.classList.add('red-color-bg')
-  task7Btn1.classList.toggle('green-color-bg');
+const colorСhangingBtn = document.querySelector('#task-7');
+colorСhangingBtn.addEventListener('click', () => {
+  colorСhangingBtn.classList.add('red-color-bg')
+  colorСhangingBtn.classList.toggle('green-color-bg');
 })
 //задание 6
-const productHeading = document.querySelector('.product-heading')
-productHeading.addEventListener('mouseover', () => {
-  console.log(productHeading.textContent)
+const mainTitle = document.querySelector('.product-heading')
+mainTitle.addEventListener('mouseover', () => {
+  console.log(mainTitle.textContent)
 })

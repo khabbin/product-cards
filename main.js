@@ -36,9 +36,8 @@ function openConsoleLog(message) {
   console.log(message)
 }
 //задание 7
-const colorСhangingBtn = document.querySelector('#task-7');
+const colorСhangingBtn = document.querySelector('#color-change-btn');
 colorСhangingBtn.addEventListener('click', () => {
-  colorСhangingBtn.classList.add('red-color-bg')
   colorСhangingBtn.classList.toggle('green-color-bg');
 })
 //задание 6

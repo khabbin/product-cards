@@ -93,3 +93,10 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.red-color-bg {
+  background-color: red;
+}
+.green-color-bg {
+  background-color: green;
+}

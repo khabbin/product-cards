@@ -18,8 +18,8 @@ checkSpeed(343)
 // задание 5 Продукс с ценой
 let productName = 'moisturizing mousse';
 let productPrice = 2750;
-const purchaseProduct  = (balance) => {
-  if (balance >=  productPrice) {
+const purchaseProduct = (balance) => {
+  if (balance >= productPrice) {
     console.log(`${productName} приобретён.`)
   } else{
     console.log(`Вам не хватает ${productPrice - balance} $ пополните баланс`)

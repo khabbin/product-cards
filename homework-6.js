@@ -3,11 +3,12 @@ const personInfo = {
   firstName: 'Мухаммад',
   lastName: 'Хаббин',
   age: 19,
-  country: 'russia',
+  country: 'Russia',
   city: 'Sibay',
   Employment: 'study',
   mail: '123@gmail.com'
 }
+
 //задание 4
 const carInfo = {
   brand: 'Toyota',
@@ -15,19 +16,19 @@ const carInfo = {
   year: 2022,
   color: 'Silver Metallic',
   transmissionType: 'Automatic',
-  maxspeed: 200
+  maxSpeed: 200
 }
 carInfo.owner = personInfo;
 console.log(carInfo)
 
 //задание 5S
-const addCarSpeedProperty = carInfoObject => {
-  if (carInfo.maxspeed === undefined) { 
-    carInfo.maxspeed = 180
+const addCarSpeedProperty = () => {
+  if (!carInfo.maxSpeed) {
+    carInfo.maxSpeed = 180
   }
 }
 addCarSpeedProperty(carInfo)
-console.log(carInfo.maxspeed)
+console.log(carInfo.maxSpeed)
 
 //задание 6
 const showObjectValue = (object, key) => {
@@ -41,35 +42,34 @@ const products = ['Увлажняющий мусс', 'Увлажняющая м�
 //задание 8
 const literaryBooks = [
   {
-  name: '1984',
-  autor: 'Джордж Оруэлл',
-  year: 1949,
-  coverColor: 'Серый',
-  genre: 'Антиутопия'
+    name: '1984',
+    autor: 'Джордж Оруэлл',
+    year: 1949,
+    coverColor: 'Серый',
+    genre: 'Антиутопия'
   },
   {
-  name: 'Мастер и Маргарита',
-  autor: 'Михаил Булгаков',
-  year: 1966,
-  coverColor: 'Темно-синий',
-  genre: 'Роман'
+    name: 'Мастер и Маргарита',
+    autor: 'Михаил Булгаков',
+    year: 1966,
+    coverColor: 'Темно-синий',
+    genre: 'Роман'
   },
   {
-  name: 'Гарри Поттер и философский камень',
-  autor: 'Джордж Оруэлл',
-  year: 1997,
-  coverColor: 'Красный',
-  genre: 'Фэнтези'
+    name: 'Гарри Поттер и философский камень',
+    autor: 'Джордж Оруэлл',
+    year: 1997,
+    coverColor: 'Красный',
+    genre: 'Фэнтези'
   }
 ]
-
 literaryBooks.push( 
   {
-  name: 'Убить пересмешника',
-  autor: 'Харпер Ли',
-  year: 1960,
-  coverColor: 'Белый',
-  genre: 'Роман'
+    name: 'Убить пересмешника',
+    autor: 'Харпер Ли',
+    year: 1960,
+    coverColor: 'Белый',
+    genre: 'Роман'
   }
 )
 console.log(literaryBooks)
@@ -77,33 +77,32 @@ console.log(literaryBooks)
 //задание 9
 const marvelBooks = [
   {
-  name: 'Человек-паук: Синий',
-  autor: 'Джеф Лоуб',
-  year: 2002 ,
-  coverColor: 'Синий ',
-  genre: 'Супергероика'
+    name: 'Человек-паук: Синий',
+    autor: 'Джеф Лоуб',
+    year: 2002 ,
+    coverColor: 'Синий ',
+    genre: 'Супергероика'
   },
   {
-  name: 'Гражданская война',
-  autor: 'Марк Миллар',
-  year: 2006,
-  coverColor: 'Красный',
-  genre: 'Супергероика'
+    name: 'Гражданская война',
+    autor: 'Марк Миллар',
+    year: 2006,
+    coverColor: 'Красный',
+    genre: 'Супергероика'
   },
   {
-  name: 'Дэдпул уничтожает вселенную Марвел',
-  autor: 'Каллен Банн',
-  year: 2011,
-  coverColor: 'Красный',
-  genre: 'Супергероика'
+    name: 'Дэдпул уничтожает вселенную Марвел',
+    autor: 'Каллен Банн',
+    year: 2011,
+    coverColor: 'Красный',
+    genre: 'Супергероика'
   }
 ]
 const combinedBooks = [...literaryBooks, ...marvelBooks]
 console.log(combinedBooks)
 
 // задание 10
-const booksRarityArray = combinedBooks.map((book) => {
-  return {...book, rarity : book.year <= 2000 ? true : false}
-})
-
+const booksRarityArray = combinedBooks.map((book) => 
+   ({...book, rarity : book.year <= 2000})
+)
 console.log(booksRarityArray)

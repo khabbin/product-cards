@@ -5,7 +5,7 @@ const personInfo = {
   age: 19,
   country: 'Russia',
   city: 'Sibay',
-  Employment: 'study',
+  employment: 'study',
   mail: '123@gmail.com'
 }
 
@@ -103,6 +103,6 @@ console.log(combinedBooks)
 
 // задание 10
 const booksRarityArray = combinedBooks.map((book) => 
-   ({...book, rarity : book.year <= 2000})
+   ({...book, rarity: book.year <= 2000})
 )
 console.log(booksRarityArray)

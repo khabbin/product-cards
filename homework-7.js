@@ -6,7 +6,7 @@ const filteredNumbersArray = numbers.filter(number => number > 5);
 console.log(filteredNumbersArray)
 
 //задание 3 
-const furnitures  = ['стул', 'стол', 'шкаф', 'диван', 'холодильник'];
+const furnitures = ['стул', 'стол', 'шкаф', 'диван', 'холодильник'];
 console.log(furnitures.includes('стол'));
  
 //задание 4
@@ -42,7 +42,7 @@ const emailAddressesArray = commentsData.map(comment => comment.email);
 console.log(emailAddressesArray);
 
 //задание 12 методами join и toString
-const emeilAddressesStringJoinMethod = emailAddressesArray.join()
+const emeilAddressesStringJoinMethod = emailAddressesArray.join();
 console.log(emeilAddressesStringJoinMethod)
-const emeilAddressesStringToStringMethod = emailAddressesArray.toString()
+const emeilAddressesStringToStringMethod = emailAddressesArray.toString();
 console.log(emeilAddressesStringToStringMethod)

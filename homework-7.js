@@ -1,13 +1,13 @@
 import { commentsData } from "./comments.js"
 
 //задание 2
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const filtredNumbersArray = numbers.filter(number => number>5)
-console.log(filtredNumbersArray)
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const filteredNumbersArray = numbers.filter(number => number > 5);
+console.log(filteredNumbersArray)
 
 //задание 3 
-const furniture = ['стул', 'стол', 'шкаф', 'диван', 'холодильник']
-console.log(furniture.includes('стол'))
+const furnitures  = ['стул', 'стол', 'шкаф', 'диван', 'холодильник'];
+console.log(furnitures.includes('стол'));
  
 //задание 4
 const reverseArray = array => {
@@ -28,8 +28,8 @@ const commentsIdAndEmeilArray = commentsData.map((user) => ({id: user.id, emeil:
 console.log(commentsIdAndEmeilArray)
 
 //задание 10 
-const isInvalidPropertyСommentsArray = commentsData.map((user)=> ({...user, isInvalid: user.body.length>=180}))
-console.log(isInvalidPropertyСommentsArray)
+const isInvalidPropertyCommentsArray = commentsData.map(user => ({...user, isInvalid: user.body.length>=180}));
+console.log(isInvalidPropertyCommentsArray)
 
 //задание 11
 const commentsEmeils = commentsData.reduce((accumulator, user) => {

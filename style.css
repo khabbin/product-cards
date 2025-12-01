@@ -10,6 +10,7 @@
 }
 
 .card-container {
+  display: block;
   width: 340px;
   height: 573px;
   padding: 25px;
@@ -99,4 +100,10 @@
 }
 .green-color-bg {
   background-color: green;
+}
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+  justify-content: center; 
 }

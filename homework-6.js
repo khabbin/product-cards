@@ -19,7 +19,6 @@ const carInfo = {
   maxSpeed: 200
 }
 carInfo.owner = personInfo;
-//console.log(carInfo)
 
 //задание 5S
 const addCarSpeedProperty = () => {
@@ -28,13 +27,11 @@ const addCarSpeedProperty = () => {
   }
 }
 addCarSpeedProperty(carInfo)
-//console.log(carInfo.maxSpeed)
 
 //задание 6
 const showObjectValue = (object, key) => {
   console.log(`${key}:`, object[key])
 }
-//showObjectValue(carInfo, 'model')
 
 //задание 7
 const products = ['Увлажняющий мусс', 'Увлажняющая маска', 'Гель для умывания', 'Подарочный набор 1', 'Подарочный набор 5']
@@ -72,7 +69,6 @@ literaryBooks.push(
     genre: 'Роман'
   }
 )
-//console.log(literaryBooks)
 
 //задание 9
 const marvelBooks = [
@@ -99,10 +95,8 @@ const marvelBooks = [
   }
 ]
 const combinedBooks = [...literaryBooks, ...marvelBooks]
-//console.log(combinedBooks)
 
 // задание 10
 const booksRarityArray = combinedBooks.map((book) => 
    ({...book, rarity: book.year <= 2000})
 )
-//console.log(booksRarityArray)

@@ -3,7 +3,7 @@ import { productsInfo } from './product-cards.js';
 const productsTemplate = document.getElementById('product-template');
 const productsList = document.querySelector('.cards-list');
 const cardsCount = prompt("Сколько карт до 5шт. отобразить?:", "");
-const check = () => {
+const displayCardsByCount = () => {
   if (cardsCount > 5) {
     alert('Введите значение от 0 до 5')
   } else {
@@ -15,7 +15,6 @@ const check = () => {
     cardClone.querySelector('.product-discription').textContent = card.discription;
     cardClone.querySelector('.product-price').textContent = `${card.price}` + '\u0024';
     const productCompound = cardClone.querySelector("#product-compound-list");
-    productCompound.innerHTML = "";
     card.compound.forEach(element => {
       const li = document.createElement("li");
       li.textContent = element;
@@ -24,7 +23,7 @@ const check = () => {
     productsList.appendChild(cardClone)
   })
 }}
-check()
+displayCardsByCount() 
 
 
 //4) Используя метод .reduce(), получить строку,

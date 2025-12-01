@@ -2,7 +2,6 @@
 const displayCityTemperature = (temperature, city) => {
   console.log(`Сейчас в городе ${temperature} температура  — ${city} градусов по Цельсию`)
 }
-//displayCityTemperature('Москва', '0')
 // 4 задание скорость звука(скорость звука в сухом воздухе при 20 °C = 343 м / с)
 const SOUND_SPEED = 343;
 const checkSpeed = speed => {
@@ -14,7 +13,6 @@ const checkSpeed = speed => {
     console.log("Дозвуковая скорость")
   }
 }
-//checkSpeed(343)
 // задание 5 Продукс с ценой
 let productName = 'moisturizing mousse';
 let productPrice = 2750;
@@ -25,7 +23,6 @@ const purchaseProduct = (balance) => {
     console.log(`Вам не хватает ${productPrice - balance} $ пополните баланс`)
   }
 }
-//purchaseProduct (2500)
 //6.Создать 1 функцию и именовать её по своему усмотрению
 const sayHi = () => {
   console.log('hi')

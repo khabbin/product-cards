@@ -11,6 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- форма для авторизации -->
+  <button id="authentication" class="authentication-btn">Аутентификация</button>
+  <form action="/" class="user-form" >
+    <label for="">Имя:<input type="text" placeholder="Введите ваше имя" name="name" required autocomplete="off"></label>
+    <label for="surname">Фамилия:<input type="text" placeholder="Введите вашу фамилию" name="surname" required autocomplete="off"></label>
+    <label for="">Дата рождения:<input type="date" placeholder="Введите вашу дату рождения" name="birthdate" required autocomplete="off"></label>
+    <label for="">Логин:<input type="text" placeholder="Введите ваш логин" name="login" required autocomplete="off"></label>
+    <label for="">Пароль:<input type="password" placeholder="Введите ваш пароль" name="password" required autocomplete="off"></label>
+    <label>Пароль:<input type="password" placeholder="Введите ваш пароль снова" name="repeat-password" required autocomplete="off"></label>
+    <button type="submit" class="user-form-btn">Отправить форму</button>
+  </form>
   <div class="main-container">
     <h1 class="product-heading">Выбери свой продукт</h1>
     <ul class="cards-list"></ul>
@@ -19,9 +30,9 @@
           <img id='product-image', src="img" alt="" width="290" height="245">
           <span class="product-category"></span>
           <h3 class="product-name"></h3>
-          <p class="product-discription"></p>
+          <p class="product-description"></p>
           <span>Состав:</span>
-          <ul id="product-compound-list", class = "product-compound-item"></ul>
+          <ul id="product-compound-list", class="product-compound-item"></ul>
           <div class="product-price-container">
             <span class="product-price-lable">Цена</span>
             <span class="product-price"></span>
@@ -29,10 +40,51 @@
         </div>
     </template>
   </div>
+  <!-- футер -->
+  <footer class="footer-box">
+    <div class="footer-left-block">
+      <p class="product-cards">Product Cards</p>
+      <p class="product-cards-description">У нас самые лучшие продукты для кожи!</p>
+      <div class="messenger-img-box">
+        <img src="footer-images/vk.png" alt="vk" width="24px" height="14px">
+        <img src="footer-images/tg.png" alt="tg" width="21px" height="17.61px">
+      </div>
+    </div>
+    <p class="form-text">Подпишись на наши акции:</p>
+    <form action="/" class="form-bg" id="subscribe-form">
+      <input type="email" class="bgg form-btn" name="email" placeholder="Введи Email..." autocomplete="off" required>
+    </form>
+    <button type="submit" class="form-subscribe-btn" form="subscribe-form">Подписаться</button>
+    <p class="product-cards-link-footer"> www.product-cards.com©all right reserve</p>
+    <div class="footer-line-img"></div>
+    <h3 class="fast-links-toc">Быстрые ссылки</h3>
+    <nav class="fast-links">
+      <ul style="list-style: none;" class="fast-links-list">
+        <li>Главная</li>
+        <li>Магазин</li>
+        <li>Контакты</li>
+      </ul>
+    </nav>
+  </footer>
+  <!-- модальное окно с авторизацией -->
+  <div class="modal">
+    <div class="modal-showed">
+      <h1>Авторизация</h1>
+      <form action="/" class="modal-showed" id="authentication-form">
+        <label>Логин:<input type="text" placeholder="Введдите ваш логин..." name="login" autocomplete="off"></label>
+        <label>Пароль:<input type="password" placeholder="Введдите ваш пароль..." name="password" autocomplete="off"></label>
+        <button type="submit" class="modal-login">Войти</button>
+      </form>
+      <button class="modal-close">X</button>
+    </div>
+    <div class="overlay"></div>
+  </div>
+  
   <script src="main.js"></script>
   <script src="homework-5.js"></script>
   <script src="homework-6.js"></script>
   <script src="homework-7.js" type="module"></script>
   <script src="homework-8.js" type="module"></script>
+  <script src="homework-9.js"></script>
 </body>
 </html>

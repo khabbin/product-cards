@@ -2,7 +2,7 @@ import { productsInfo } from './product-cards.js';
 // задание 3 и 6 
 const productsTemplate = document.getElementById('product-template');
 const productsList = document.querySelector('.cards-list');
-const cardsCount = prompt("Сколько карт до 5шт. отобразить?:", "");
+//const cardsCount = prompt("Сколько карт до 5шт. отобразить?:", "");
 const displayCardsByCount = () => {
   if (cardsCount > 5) {
     alert('Введите значение от 0 до 5')
@@ -12,7 +12,7 @@ const displayCardsByCount = () => {
     cardClone.querySelector('#product-image').src = `/images/${card.img}.png`;
     cardClone.querySelector('.product-name').textContent = card.name;
     cardClone.querySelector('.product-category').textContent = card.category;
-    cardClone.querySelector('.product-discription').textContent = card.discription;
+    cardClone.querySelector('.product-description').textContent = card.description;
     cardClone.querySelector('.product-price').textContent = `${card.price}` + '\u0024';
     const productCompound = cardClone.querySelector("#product-compound-list");
     card.compound.forEach(element => {
@@ -23,7 +23,7 @@ const displayCardsByCount = () => {
     productsList.appendChild(cardClone)
   })
 }}
-displayCardsByCount() 
+//displayCardsByCount()
 
 
 //4) Используя метод .reduce(), получить строку,
@@ -33,7 +33,7 @@ const productNamesString = productsInfo.reduce((acc, card) => {
 },'');
 // 5) Используя метод .reduce(), получить массив объектов,
 // где ключем является название продукта, а значением - его описание
-const productNameAndDiscriptionArray = productsInfo.reduce((acc, card) => {
-  acc.push({[card.name]: [card.discription]})
+const productNameAndDescriptionArray = productsInfo.reduce((acc, card) => {
+  acc.push({[card.name]: [card.description]})
   return acc
 },[]);

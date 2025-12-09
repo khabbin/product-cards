@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +13,30 @@
   <!-- форма для авторизации -->
   <button id="authentication" class="authentication-btn">Аутентификация</button>
   <form action="/" class="user-form" >
-    <label for="">Имя:<input type="text" placeholder="Введите ваше имя" name="name" required autocomplete="off"></label>
-    <label for="surname">Фамилия:<input type="text" placeholder="Введите вашу фамилию" name="surname" required autocomplete="off"></label>
-    <label for="">Дата рождения:<input type="date" placeholder="Введите вашу дату рождения" name="birthdate" required autocomplete="off"></label>
-    <label for="">Логин:<input type="text" placeholder="Введите ваш логин" name="login" required autocomplete="off"></label>
-    <label for="">Пароль:<input type="password" placeholder="Введите ваш пароль" name="password" required autocomplete="off"></label>
-    <label>Пароль:<input type="password" placeholder="Введите ваш пароль снова" name="repeat-password" required autocomplete="off"></label>
+    <div class="form-row">
+      <label for="name">Имя:</label>
+      <input type="text" placeholder="Введите ваше имя" name="name" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="surname">Фамилия:</label>
+      <input type="text" placeholder="Введите вашу фамилию" name="surname" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="">Дата рождения:</label>
+      <input type="date" placeholder="Введите вашу дату рождения" name="birthdate" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="birthdate">Логин:</label>
+      <input type="text" placeholder="Введите ваш логин" name="login" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="password">Пароль:</label>
+      <input type="password" placeholder="Введите ваш пароль" name="password" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="repeat-password">Пароль:</label>
+      <input type="password" placeholder="Введите ваш пароль снова" name="repeat-password" required autocomplete="off">
+    </div>
     <button type="submit" class="user-form-btn">Отправить форму</button>
   </form>
   <div class="main-container">
@@ -45,9 +62,9 @@
     <div class="footer-left-block">
       <p class="product-cards">Product Cards</p>
       <p class="product-cards-description">У нас самые лучшие продукты для кожи!</p>
-      <div class="messenger-img-box">
-        <img src="footer-images/vk.png" alt="vk" width="24px" height="14px">
-        <img src="footer-images/tg.png" alt="tg" width="21px" height="17.61px">
+      <div class="messenger-icons-box">
+        <img src="footer-images/icon-vk.svg" alt="vk" width="24px" height="14px">
+        <img src="footer-images/icon-tg.svg" alt="tg" width="21px" height="18px">
       </div>
     </div>
     <p class="form-text">Подпишись на наши акции:</p>
@@ -71,15 +88,20 @@
     <div class="modal-showed">
       <h1>Авторизация</h1>
       <form action="/" class="modal-showed" id="authentication-form">
-        <label>Логин:<input type="text" placeholder="Введдите ваш логин..." name="login" autocomplete="off"></label>
-        <label>Пароль:<input type="password" placeholder="Введдите ваш пароль..." name="password" autocomplete="off"></label>
+        <div class="form-row">
+          <label for="login">Логин:</label>
+          <input type="text" placeholder="Введдите ваш логин..." name="login" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <label for="password">Пароль:</label>
+          <input type="password" placeholder="Введдите ваш пароль..." name="password" autocomplete="off">
+        </div>
         <button type="submit" class="modal-login">Войти</button>
       </form>
       <button class="modal-close">X</button>
     </div>
     <div class="overlay"></div>
   </div>
-  
   <script src="main.js"></script>
   <script src="homework-5.js"></script>
   <script src="homework-6.js"></script>

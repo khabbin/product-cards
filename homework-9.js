@@ -8,27 +8,26 @@
 //   };
 //   console.log(values)
 // })
-
 //4. К Форме, которая прикреплена в футере - добавить логику:
 //email должен соответствовать стандартам (добавить валидацию), если он не заполнен - форма не отправляется
 let user = undefined // 6. Сохраняем этот объект в переменную для дальнейшего использования.
 const subscribeForm = document.querySelector('#subscribe-form');
-
-subscribeForm.addEventListener('submit', (event) => {
+ const getFormData = (event) => {
   event.preventDefault();
   const form = event.target;
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
-  console.log(data);
+  return data;
+}
+subscribeForm.addEventListener('submit', (event) => {
+  data = getFormData(event)
+  console.log(data)
   alert('Вы подписались')
 })
 //5. Создать форму для регистрации.
 const userForm = document.querySelector('.user-form')
 userForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form)
-  user = Object.fromEntries(formData.entries())
+  user = getFormData(event)
   if (user['password'] === user['repeat-password']) {
     user.CreatedOn = new Date()
     alert('регистрация пройдена')
@@ -56,10 +55,7 @@ closeBtn.addEventListener('click', () => {
 
 const authenticationForm = document.querySelector('#authentication-form')
 authenticationForm.addEventListener('submit', (event) => {
-  event.preventDefault()
-  const form = event.target;
-  const formData = new FormData(form);
-  currentUser = Object.fromEntries(formData.entries())
+  currentUser = getFormData(event)
   if ((user['password'] === currentUser['password'] && user['login'] === currentUser['login'])) {
     currentUser = {...user, lastLogin: new Date()}
     console.log(currentUser)

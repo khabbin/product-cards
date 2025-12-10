@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,103 +10,98 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- форма для авторизации -->
+  <button id="authentication" class="authentication-btn">Аутентификация</button>
+  <form action="/" class="user-form" >
+    <div class="form-row">
+      <label for="name">Имя:</label>
+      <input type="text" placeholder="Введите ваше имя" name="name" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="surname">Фамилия:</label>
+      <input type="text" placeholder="Введите вашу фамилию" name="surname" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="">Дата рождения:</label>
+      <input type="date" placeholder="Введите вашу дату рождения" name="birthdate" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="birthdate">Логин:</label>
+      <input type="text" placeholder="Введите ваш логин" name="login" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="password">Пароль:</label>
+      <input type="password" placeholder="Введите ваш пароль" name="password" required autocomplete="off">
+    </div>
+    <div class="form-row">
+      <label for="repeat-password">Пароль:</label>
+      <input type="password" placeholder="Введите ваш пароль снова" name="repeat-password" required autocomplete="off">
+    </div>
+    <button type="submit" class="user-form-btn">Отправить форму</button>
+  </form>
   <div class="main-container">
-    <button id='change-card-color-button'>Сменить цвет карточки</button>
-    <button id='change-all-cards-color-button'>Сменить цвет всех карточек</button>
-    <button id='open-google-btn'> Открыть страницу гугла</button>
-    <button id='open-google-answer'>Открыть гугл (задание 5)</button>
-    <button id='output-console-log-btn'>Сообщение в консоль</button>
-    <button id='color-change-btn' class="red-color-bg">Сменить цвет кнопки</button>
     <h1 class="product-heading">Выбери свой продукт</h1>
-    <ul class="products-box">
-        <li class="card-container">
-          <img src="/images/mousse.png" alt="Увлажняющий мусс" width="290" height="245">
-          <span class="product-category">для нормальной кожи</span>
-          <h3 class="product-name">Увлажняющий мусс</h3>
-          <p class="product-discription">Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.</p>
+    <ul class="cards-list"></ul>
+    <template id="product-template">
+        <div class="card-container">
+          <img id='product-image', src="img" alt="" width="290" height="245">
+          <span class="product-category"></span>
+          <h3 class="product-name"></h3>
+          <p class="product-description"></p>
           <span>Состав:</span>
-          <ul>
-            <li class="product-compound-item">активные натуральные комплексы</li>
-            <li class="product-compound-item">витамины С, А, РР, В И Е</li>
-            <li class="product-compound-item">солнцезащитные компоненты</li>
-          </ul>
+          <ul id="product-compound-list", class="product-compound-item"></ul>
           <div class="product-price-container">
             <span class="product-price-lable">Цена</span>
-            <span class="product-price">2 750 &#8381;</span>
+            <span class="product-price"></span>
           </div>
-        </li>
-    
-        <li class="card-container">
-          <img src="/images/mask.png" alt="Увлажняющая маска" width="290" height="245">
-          <span class="product-category">для нормальной кожи</span>
-          <h3 class="product-name">Увлажняющая маска</h3>
-          <p class="product-discription">Способствует удерживанию влаги в верхних слоях кожи.</p>
-          <span>Состав: </span>
-          <ul>
-            <li class="product-compound-item">воски</li>
-            <li class="product-compound-item">минералы</li>
-            <li class="product-compound-item">масла</li>
-          </ul>
-          <div class="product-price-container">
-            <span class="product-price-lable">Цена</span>
-            <span class="product-price">3 500 &#8381;</span>
-          </div>
-        </li>
-    
-        <li class="card-container">
-          <img src="/images/gel.png" alt="Гель для умывания" width="290" height="245">
-          <span class="product-category">для нормальной кожи</span>
-          <h3 class="product-name">Гель для умывания</h3>
-          <p class="product-discription">Интенсивно очищает, не повреждает защитный барьер кожи.</p>
-          <span>Состав: </span>
-          <ul>
-            <li class="product-compound-item">минералы</li>
-            <li class="product-compound-item">витамины С, А, РР, В И Е</li>
-            <li class="product-compound-item">солнцезащитные компоненты</li>
-          </ul>
-          <div class="product-price-container">
-            <span class="product-price-lable">Цена</span>
-            <span class="product-price">1 650 &#8381;</span>
-          </div>
-        </li>
-    
-        <li class="card-container">
-          <img src="/images/gift-set1.png" alt="Подарочный набор &#8470;1" width="290" height="245">
-          <span class="product-category">для нормальной кожи</span>
-          <h3 class="product-name">Подарочный набор &#8470;1</h3>
-          <p class="product-discription">Набор, состоящий из увлажняющего крема и маски.</p>
-          <span>Состав: </span>
-          <ul>
-            <li class="product-compound-item">воски</li>
-            <li class="product-compound-item">минералы</li>
-            <li class="product-compound-item">масла</li>
-          </ul>
-          <div class="product-price-container">
-            <span class="product-price-lable">Цена</span>
-            <span class="product-price">4 750 &#8381;</span>
-          </div>
-        </li>
-    
-        <li class="card-container">
-          <img src="/images/gift-set5.png" alt="Подарочный набор &#8470;5" width="290" height="245">
-          <span class="product-category">для нормальной кожи</span>
-          <h3 class="product-name">Подарочный набор &#8470;5</h3>
-          <p class="product-discription">Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.</p>
-          <span>Состав: </span>
-          <ul>
-            <li class="product-compound-item">воски</li>
-            <li class="product-compound-item">минералы</li>
-            <li class="product-compound-item">масла</li>
-          </ul>
-          <div class="product-price-container">
-            <span class="product-price-lable">Цена</span>
-            <span class="product-price">7 520 &#8381;</span>
-          </div>
-        </li>
-    </ul>
+        </div>
+    </template>
   </div>
-  <script src="main.js"></script>
-  <script src="homework-5.js"></script>
-  <script src="homework-6.js"></script>
+  <!-- футер -->
+  <footer class="footer-box">
+    <div class="footer-left-block">
+      <p class="product-cards">Product Cards</p>
+      <p class="product-cards-description">У нас самые лучшие продукты для кожи!</p>
+      <div class="messenger-icons-box">
+        <img src="footer-images/icon-vk.svg" alt="vk" width="24px" height="14px">
+        <img src="footer-images/icon-tg.svg" alt="tg" width="21px" height="18px">
+      </div>
+    </div>
+    <p class="form-text">Подпишись на наши акции:</p>
+    <form action="/" class="form-bg" id="subscribe-form">
+      <input type="email" class="bgg form-btn" name="email" placeholder="Введи Email..." autocomplete="off" required>
+    </form>
+    <button type="submit" class="form-subscribe-btn" form="subscribe-form">Подписаться</button>
+    <p class="product-cards-link-footer"> www.product-cards.com©all right reserve</p>
+    <div class="footer-line-img"></div>
+    <h3 class="fast-links-toc">Быстрые ссылки</h3>
+    <nav class="fast-links">
+      <ul style="list-style: none;" class="fast-links-list">
+        <li>Главная</li>
+        <li>Магазин</li>
+        <li>Контакты</li>
+      </ul>
+    </nav>
+  </footer>
+  <!-- модальное окно с авторизацией -->
+  <div class="modal">
+    <div class="modal-showed">
+      <h1>Авторизация</h1>
+      <form action="/" class="modal-showed" id="authentication-form">
+        <div class="form-row">
+          <label for="login">Логин:</label>
+          <input type="text" placeholder="Введдите ваш логин..." name="login" autocomplete="off">
+        </div>
+        <div class="form-row">
+          <label for="password">Пароль:</label>
+          <input type="password" placeholder="Введдите ваш пароль..." name="password" autocomplete="off">
+        </div>
+        <button type="submit" class="modal-login">Войти</button>
+      </form>
+      <button class="modal-close">X</button>
+    </div>
+    <div class="overlay"></div>
+  </div>
+  <script src="main.js" type="module"></script>
 </body>
 </html>

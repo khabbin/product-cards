@@ -1,0 +1,1 @@
+console.log('privet ya 10 zadanie')

@@ -142,7 +142,7 @@
   position: relative;
 }
 
-.product-cards-description{
+.product-cards-description {
   font-weight: 400;
   font-size: 18px;
   line-height: 154%;
@@ -152,25 +152,25 @@
   display: inline-block;
 }
 
-.messenger-icons-box{
+.messenger-icons-box {
   margin-top: 42px;
   display: flex;
   gap: 30.5px
 }
 
-.form-bg{
+.form-bg {
   left: 625px;
   top: 127px;
   display: flex;
   justify-content: space-between;
   height: 61px;
   width: 477px;
-  background-image: url('/footer-images/emeil-input-background.png');
+  background-image: url('/footer-images/email-input-background.png');
   background-size: 477px 61px;
   position: absolute;
 }
 
-.form-btn{
+.form-btn {
   background-color: transparent;
   border: none;
   outline: none;
@@ -181,7 +181,7 @@
   font-size: 14;
 }
 
-.form-subscribe-btn{
+.form-subscribe-btn {
   font-size: 18px;
   color:black;
   background-color: transparent;
@@ -196,7 +196,7 @@
   left: 942px;
 }
 
-.form-text{
+.form-text {
   display: inline-block;
   position: absolute;
   top:85px;
@@ -214,7 +214,7 @@
   margin-bottom: 23px;
 }
 
-.fast-links{
+.fast-links {
   position: absolute;
   top: 132px;
   left: 1475px;
@@ -222,13 +222,13 @@
   margin-bottom: 17px;
 }
 
-.fast-links-list{
+.fast-links-list {
   display: flex;
   flex-direction: column;
   gap:16px
 }
 
-.product-cards-link-footer{
+.product-cards-link-footer {
   font-weight: 400;
   width: 100%;
   height: 22px;
@@ -239,7 +239,7 @@
   left: 676px;
 }
 
-.footer-line-img{
+.footer-line-img {
   background-image: url('/footer-images/footer-horizontal-bar.png');
   position: absolute;
   width: 66px;
@@ -248,13 +248,13 @@
   left: 830px;
 }
 
-.user-form input{
+.user-form input {
   justify-content: space-between;
   background: none;
   border: none;
 }
 
-.user-form{
+.user-form {
   border: 2px solid skyblue;
   background-color: blanchedalmond;
   display: flex;
@@ -266,7 +266,7 @@
   height: 25%;
 }
 
-.user-form-btn{
+.user-form-btn {
   cursor: pointer;
   background: none;
   border: none;
@@ -278,7 +278,7 @@
   border-radius: 10px;
 }
 
-.modal{
+.modal {
   visibility: hidden;
   display: flex;
   align-items: center;
@@ -290,7 +290,7 @@
   height: 100%;
 }
 
-.modal-showed{
+.modal-showed {
   gap: 10px;
   position: relative;
   display: flex;
@@ -305,7 +305,7 @@
   padding: 30px;
 }
 
-.modal .overlay{
+.modal .overlay {
   position: absolute;
   top:0;
   left:0;
@@ -316,7 +316,7 @@
   z-index: 0;
 }
 
-.modal-close{
+.modal-close {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -325,14 +325,14 @@
   background-color: #C41E3A;
 }
 
-.modal-login{
+.modal-login {
   background-color: greenyellow;
   opacity: 0.7;
   justify-content: center;
   margin-top: 20px;
 }
 
-.modal-login:hover{
+.modal-login:hover {
   background-color: green;
   opacity: 1;
 }

@@ -11,17 +11,18 @@
 //4. К Форме, которая прикреплена в футере - добавить логику:
 //email должен соответствовать стандартам (добавить валидацию), если он не заполнен - форма не отправляется
 let user = undefined // 6. Сохраняем этот объект в переменную для дальнейшего использования.
-const subscribeForm = document.querySelector('#subscribe-form');
- const getFormData = (event) => {
+// const subscribeForm = document.querySelector('#subscribe-form');
+const getFormData = (event) => {
   event.preventDefault();
   const form = event.target;
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
   return data;
 }
+const subscribeForm = document.querySelector('#subscribe-form')
 subscribeForm.addEventListener('submit', (event) => {
-  data = getFormData(event)
-  console.log(data)
+  let dataEmeil = getFormData(event)
+  console.log(dataEmeil)
   alert('Вы подписались')
 })
 //5. Создать форму для регистрации.

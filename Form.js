@@ -1,6 +1,6 @@
 export class Form {
   constructor(id) {
-    this.form = document.getElementById(`${id}`)
+    this.form = document.getElementById(id)
   }
   getFormData() {
     const formData = new FormData(this.form);
@@ -9,10 +9,9 @@ export class Form {
   }
   isValid(){
     if (!this.form.checkValidity()) {
-      console.log('isValid:',false);
-    } else { 
-      console.log('isValid:',true);
-  }}
+      return false
+    } else return true
+  }
   resetForm() {
     this.form.reset()
   }

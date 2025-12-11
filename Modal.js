@@ -1,6 +1,6 @@
 export class Modal {
   constructor(id) {
-    this.ModalElement = document.getElementById(`${id}`)
+    this.ModalElement = document.getElementById(id)
   }
   openModal() {
     this.ModalElement.style.visibility = 'visible'
@@ -10,9 +10,7 @@ export class Modal {
   }
   isModalOpen() {
     if (this.ModalElement.style.visibility === 'visible') {
-      console.log('isModalOpen:', true)
-    } else {
-      console.log('isModalOpen:', false)
-    }
+      return true
+    } else return false
   }
 }

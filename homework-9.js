@@ -1,13 +1,3 @@
-//Первый вариант задания 4 хочу оставить чтоб запомнить
-// form = document.querySelector('#subscribe-form')
-// form.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   const email = form.querySelector('[name="email"]')
-//   const values = {
-//     email: email.value
-//   };
-//   console.log(values)
-// })
 import { Form } from './Form.js'
 import { Modal } from './Modal.js'
 let user = undefined 
@@ -15,7 +5,7 @@ const subscribeForm = document.querySelector('#subscribe-form')
 subscribeForm.addEventListener('submit', (event) => {
   event.preventDefault()
   let dataEmail = new Form('subscribe-form')
-  dataEmail.isValid()
+  console.log(('validation:', userInfoElement.isValid()))
   dataEmail.resetForm()
   console.log(dataEmail.getFormData())
   alert('Вы подписались')
@@ -25,7 +15,7 @@ const userForm = document.querySelector('.user-form')
 userForm.addEventListener('submit', (event) => {
   event.preventDefault()
   let userInfoElement =  new Form('user-form-id')
-  userInfoElement.isValid()
+  console.log('validation:', userInfoElement.isValid())
   user = userInfoElement.getFormData()
   userInfoElement.resetForm()
   if (user['password'] === user['repeat-password']) {
@@ -46,19 +36,19 @@ const modalBox = new Modal('modal-window')
 authenticationBtn.addEventListener('click', () => {
   
   modalBox.openModal()
-  modalBox.isModalOpen()
+  console.log('isModalOpen:', modalBox.isModalOpen())
 })
 
 closeBtn.addEventListener('click', () => {
   modalBox.closeModal()
-  modalBox.isModalOpen()
+  console.log('isModalOpen:', modalBox.isModalOpen())
 })
 
 const authenticationForm = document.querySelector('#authentication-form')
 authenticationForm.addEventListener('submit', (event) => {
   event.preventDefault()
   let currentUserElement = new Form('authentication-form')
-  currentUserElement.isValid()
+  console.log('validation:', userInfoElement.isValid())
   currentUser = currentUserElement.getFormData()
   currentUserElement.resetForm()
   if ((user['password'] === currentUser['password'] && user['login'] === currentUser['login'])) {
@@ -66,7 +56,7 @@ authenticationForm.addEventListener('submit', (event) => {
     console.log(currentUser)
     alert('Успешная авторизация')
     modalBox.closeModal()
-    modalBox.isModalOpen()
+    console.log('isModalOpen:', modalBox.isModalOpen())
   } else {
     alert('Пароль или логин не совпадает')
   }

@@ -5,7 +5,7 @@ const subscribeForm = document.querySelector('#subscribe-form')
 subscribeForm.addEventListener('submit', (event) => {
   event.preventDefault()
   let dataEmail = new Form('subscribe-form')
-  console.log(('validation:', userInfoElement.isValid()))
+  console.log(('validation:', dataEmail.isValid()))
   dataEmail.resetForm()
   console.log(dataEmail.getFormData())
   alert('Вы подписались')
@@ -48,7 +48,7 @@ const authenticationForm = document.querySelector('#authentication-form')
 authenticationForm.addEventListener('submit', (event) => {
   event.preventDefault()
   let currentUserElement = new Form('authentication-form')
-  console.log('validation:', userInfoElement.isValid())
+  console.log('validation:', currentUserElement.isValid())
   currentUser = currentUserElement.getFormData()
   currentUserElement.resetForm()
   if ((user['password'] === currentUser['password'] && user['login'] === currentUser['login'])) {

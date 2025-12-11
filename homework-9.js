@@ -2,33 +2,32 @@
 // form = document.querySelector('#subscribe-form')
 // form.addEventListener('submit', (event) => {
 //   event.preventDefault();
-//   const emeil = form.querySelector('[name="email"]')
+//   const email = form.querySelector('[name="email"]')
 //   const values = {
-//     emeil: emeil.value
+//     email: email.value
 //   };
 //   console.log(values)
 // })
-//4. К Форме, которая прикреплена в футере - добавить логику:
-//email должен соответствовать стандартам (добавить валидацию), если он не заполнен - форма не отправляется
-let user = undefined // 6. Сохраняем этот объект в переменную для дальнейшего использования.
-// const subscribeForm = document.querySelector('#subscribe-form');
-const getFormData = (event) => {
-  event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData);
-  return data;
-}
+import { Form } from './Form.js'
+import { Modal } from './Modal.js'
+let user = undefined 
 const subscribeForm = document.querySelector('#subscribe-form')
 subscribeForm.addEventListener('submit', (event) => {
-  let dataEmeil = getFormData(event)
-  console.log(dataEmeil)
+  event.preventDefault()
+  let dataEmail = new Form('subscribe-form')
+  dataEmail.isValid()
+  dataEmail.resetForm()
+  console.log(dataEmail.getFormData())
   alert('Вы подписались')
 })
-//5. Создать форму для регистрации.
+
 const userForm = document.querySelector('.user-form')
 userForm.addEventListener('submit', (event) => {
-  user = getFormData(event)
+  event.preventDefault()
+  let userInfoElement =  new Form('user-form-id')
+  userInfoElement.isValid()
+  user = userInfoElement.getFormData()
+  userInfoElement.resetForm()
   if (user['password'] === user['repeat-password']) {
     user.CreatedOn = new Date()
     alert('регистрация пройдена')
@@ -38,31 +37,37 @@ userForm.addEventListener('submit', (event) => {
   }
 })
 
-// 7. Создать кнопку "Аутентификация", не стесняемся добавлять стили, практикуем css.
-// 8. Создать модальное окно, используя классы "modal, modal-showed
-// 9. В открытой модалке у нас будет форма авторизации: логин, пароль, кнопка "Войти"
-//10. Создаем глобальную переменную "currentUser"
+// Переписал логику 9 задания
 let currentUser = undefined
 const authenticationBtn = document.querySelector('#authentication');
-const modalBox = document.querySelector('.modal')
 const closeBtn = document.querySelector('.modal-close');
+const modalBox = new Modal('modal-window')
 
 authenticationBtn.addEventListener('click', () => {
-  modalBox.style.visibility = 'visible'
+  
+  modalBox.openModal()
+  modalBox.isModalOpen()
 })
+
 closeBtn.addEventListener('click', () => {
-  modalBox.style.visibility = 'hidden'
+  modalBox.closeModal()
+  modalBox.isModalOpen()
 })
 
 const authenticationForm = document.querySelector('#authentication-form')
 authenticationForm.addEventListener('submit', (event) => {
-  currentUser = getFormData(event)
+  event.preventDefault()
+  let currentUserElement = new Form('authentication-form')
+  currentUserElement.isValid()
+  currentUser = currentUserElement.getFormData()
+  currentUserElement.resetForm()
   if ((user['password'] === currentUser['password'] && user['login'] === currentUser['login'])) {
     currentUser = {...user, lastLogin: new Date()}
     console.log(currentUser)
     alert('Успешная авторизация')
-    modalBox.style.visibility = 'hidden'
+    modalBox.closeModal()
+    modalBox.isModalOpen()
   } else {
-    alert('Пароль или логин не совпадают')
+    alert('Пароль или логин не совпадает')
   }
 })

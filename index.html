@@ -12,7 +12,7 @@
 <body>
   <!-- форма для авторизации -->
   <button id="authentication" class="authentication-btn">Аутентификация</button>
-  <form action="/" class="user-form" >
+  <form action="/" class="user-form" id="user-form-id">
     <div class="form-row">
       <label for="name">Имя:</label>
       <input type="text" placeholder="Введите ваше имя" name="name" required autocomplete="off">
@@ -69,7 +69,7 @@
     </div>
     <p class="form-text">Подпишись на наши акции:</p>
     <form action="/" class="form-bg" id="subscribe-form">
-      <input type="email" class="bgg form-btn" name="email" placeholder="Введи Email..." autocomplete="off" required>
+      <input class="bgg form-btn" name="email" placeholder="Введи Email...">
     </form>
     <button type="submit" class="form-subscribe-btn" form="subscribe-form">Подписаться</button>
     <p class="product-cards-link-footer"> www.product-cards.com©all right reserve</p>
@@ -84,13 +84,13 @@
     </nav>
   </footer>
   <!-- модальное окно с авторизацией -->
-  <div class="modal">
+  <div class="modal" id="modal-window">
     <div class="modal-showed">
       <h1>Авторизация</h1>
       <form action="/" class="modal-showed" id="authentication-form">
         <div class="form-row">
           <label for="login">Логин:</label>
-          <input type="text" placeholder="Введдите ваш логин..." name="login" autocomplete="off">
+          <input type="text" placeholder="Введдите ваш логин..." name="login" autocomplete="off" type="email" required>
         </div>
         <div class="form-row">
           <label for="password">Пароль:</label>

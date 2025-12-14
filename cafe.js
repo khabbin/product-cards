@@ -1,7 +1,7 @@
-import { Drink } from './drink.js'
-import { Tea } from './tea.js'
-import { Coffee } from './coffee.js'
-import { Lemonade } from './lemonade.js'
+import { Drink } from './Drink.js'
+import { Tea } from './Tea.js'
+import { Coffee } from './Coffee.js'
+import { Lemonade } from './Lemonade.js'
 export class Cafe {
   constructor(name, address) {
     this.name = name,

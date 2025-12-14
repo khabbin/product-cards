@@ -1,4 +1,4 @@
-import { Drink  } from "./drink.js";
+import { Drink  } from "./Drink.js";
 export class Tea extends Drink{
   constructor(name, size, price, type, brewingTemperature) {
     super(name, size, price)

@@ -23,10 +23,6 @@ export class Drink {
     this.#temperature = newTemperature
   }
   
-  setTemp(newTemperature) {
-    return this.#setTemperature(newTemperature)
-  }
-  
   #makeDrink() {
     console.log(`Готовим ${this.name}, размера ${this.size}`)
   }

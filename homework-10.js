@@ -24,6 +24,3 @@ class WirelessMouse extends Mouse {
 
 const razer = new Mouse('Razer', 'DeathAdder V3')
 const logitech = new WirelessMouse('Logitech', 'G PRO X SUPERLIGHT 2', '100')
-
-razer.connected()
-logitech.connected()

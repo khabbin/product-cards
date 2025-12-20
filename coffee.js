@@ -1,4 +1,5 @@
 import { Drink } from './Drink.js'
+
 export class Coffee extends Drink {
   constructor(name, size, price, bean, milk, sugar) {
     super(name, size, price)
@@ -6,7 +7,6 @@ export class Coffee extends Drink {
     this.milk = milk
     this.sugar = sugar
   }
-  
   getInfo(){
     return {
       ...this.getInfo(),

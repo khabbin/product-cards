@@ -18,7 +18,7 @@ export class Cafe {
   
   orderProduct(drink) {
     drink.make();
-    drink.presentDrink()
+    drink.presentDrink();
   }
 }
 

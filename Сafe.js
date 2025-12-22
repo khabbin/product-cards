@@ -8,6 +8,7 @@ export class Cafe {
     this.name = name,
     this.address = address
   }
+  
   getInfo() {
     return {
       name: this.name,
@@ -16,7 +17,8 @@ export class Cafe {
   }
   
   orderProduct(drink) {
-    drink.make(), drink.presentDrink()
+    drink.make();
+    drink.presentDrink()
   }
 }
 

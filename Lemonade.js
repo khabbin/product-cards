@@ -6,7 +6,8 @@ export class Lemonade extends Drink {
     this.sugar = sugar
     this.lemon = lemon
   }
-  getInfo(){
+  
+  getInfo() {
     return {
       ...super.getInfo(),
       sugar: this.sugar,
@@ -17,7 +18,7 @@ export class Lemonade extends Drink {
   #makeDrink() {
     console.log(`Выжимаем сок из ${this.lemon} лимонов, смешиваем с ${this.sugar} сахара, перемешиваем и охлаждаем`)
   }
-  make(){
+  make() {
     this.#makeDrink();
   }
 }

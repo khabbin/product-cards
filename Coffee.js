@@ -7,7 +7,8 @@ export class Coffee extends Drink {
     this.milk = milk
     this.sugar = sugar
   }
-  getInfo(){
+  
+  getInfo() {
     return {
       ...this.getInfo(),
       bean: this.bean,

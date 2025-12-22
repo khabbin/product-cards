@@ -9,7 +9,7 @@ export class Form {
     return data;
   }
   
-  isValid(){
+  isValid() {
     return this.form.checkValidity()
   }
   

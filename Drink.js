@@ -27,7 +27,7 @@ export class Drink {
     console.log(`Готовим ${this.name}, размера ${this.size}`)
   }
   
-  make(){
+  make() {
     this.#makeDrink();
   }
   

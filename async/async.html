@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="async.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="buttons-container">
+    <button id="clear-storage-btn" class="button">Clear Storage</button>
+    <button id="delete-user-btn" class="button">Delete</button>
+    <button id="delete-all-users-btn" class="button">Delete All</button>
+    <button id="show-all-users-btn" class="button">Show All</button>
+  </div>
+  <h1 class="title">Users:</h1>
+  <div class="main-container">
+    <div class="users-list"></div>
+    <template id="users-template">
+        <div class="card-container">
+          <span id="user-id"></span>
+          <span id="user-name"></span>
+          <span id="user-surname"></span>
+          <span id="user-email"></span>
+          <span id="user-age"></span>
+        </div>
+    </template>
+  </div>
+  <span class="text loading-message" id="loading-text">Данные загружаются...</span>
+  <span class="text error-message" id="error-text">Ой, что-то пошло не так</span>
+  <script src="async.js"></script>
+</body>
+</html>

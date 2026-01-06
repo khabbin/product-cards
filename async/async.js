@@ -6,8 +6,8 @@ const usersList = document.querySelector('.users-list');
 const getLocalData = () => {
   return JSON.parse(localStorage.getItem('usersData')) || [];
 }
-const setLoadingVisible = (isVisible) => loadingTextElement.style.visibility = isVisible ? 'visible' : 'hidden';
-const setErrorVisible = (isVisible) => errorTextElement.style.visibility = isVisible ? 'visible' : 'hidden';
+const setLoadingVisible = (shouldVisible) => loadingTextElement.style.visibility = shouldVisible ? 'visible' : 'hidden';
+const setErrorVisible = (shouldVisible) => errorTextElement.style.visibility = shouldVisible ? 'visible' : 'hidden';
 
 const deleteAllUsersBtn = document.getElementById('delete-all-users-btn');
 deleteAllUsersBtn.addEventListener('click', () => {
